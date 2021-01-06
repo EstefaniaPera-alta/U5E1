@@ -1,0 +1,51 @@
+package burbuja;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
+/**
+ *
+ * @author FANNY
+ */
+public class Burbuja {
+public static void main(String[] args) {
+        List<Integer> lista = new ArrayList<Integer>();
+        lista.add(9);
+        lista.add(1);
+        lista.add(4);
+        lista.add(3);
+        lista.add(7);
+        lista.add(5);
+        System.out.println("Arreglo desordeado");
+        for(int i=0;i<lista.size();i++){
+            System.out.print(lista.get(i)+"   ");
+        }
+        System.out.println(" ");
+        int a = lista.size();
+        for(int i = 0; i < a-1 ;i++)
+        {
+            for(int j = 0; j < a-1; j++)
+            {       
+                if(lista.get(j) > lista.get(j+1))
+                {
+                    int auxiliar = lista.get(j+1);
+                    int s = lista.get(j);
+                    lista.set(j+1, s);
+                    lista.set(j, auxiliar);
+                    
+                  
+                }
+            }
+        }
+        System.out.println("-----------------------------------");
+        System.out.println("Arreglo Ordenado");
+        for(int i=0;i<lista.size();i++){
+        System.out.print(lista.get(i)+"   ");
+        
+        }
+        System.out.println(" ");
+    }
+    
+    
+}
